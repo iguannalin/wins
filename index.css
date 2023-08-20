@@ -21,3 +21,33 @@ body {
   display: flex;
   text-shadow: #858ebc -2px 2px 8px;
 }
+
+#container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  margin-top: 40%;
+  flex-flow: row wrap;
+}
+
+button {
+  text-align: center;
+  margin: 24px;
+  width: 72px;
+  height: 72px;
+  vertical-align: middle;
+  font-size: 24px;
+  box-shadow: 1px 1px 0 0.5px #575757, inset 1px 1px white, inset -1px -1px #59616a;
+  background: #c2c6ca;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0.5px 0.5px 0 0.5px black, inset 1px 1px black, inset -1px -1px #85898d, inset 2px 2px #85898d;
+  border: dashed 1px;
+}
