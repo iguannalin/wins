@@ -15,16 +15,21 @@ window.addEventListener("load", () => {
       const img = document.createElement("img");
       img.src = links[getRandomInt(0, links.length)];
       button.appendChild(img);
-      button.onclick = () => {audio.play(); reset;}
+      button.onclick = () => { audios[getRandomInt(0, audios.length)].play(); setTimeout(reset, 275); }
       container.appendChild(button);
     }
   }
 
-  let audio = new Audio("msn-sound_1.mp3");
+  let audios = [
+    new Audio("msn-sound_1.mp3"),
+    new Audio("winxpshutdown.mp3"),
+    new Audio("winxp.mp3"),
+    new Audio("vista.mp3"),
+  ];
   // all icons from -- https://win98icons.alexmeub.com/
   fetch("links.json").then((r) => r.json()).then((res) => {
     links = res;
-    audio.addEventListener("canplaythrough", (event) => {
+    audios[3].addEventListener("canplaythrough", (event) => {
       /* the audio is now playable; play it if permissions allow */
       reset();
     });
