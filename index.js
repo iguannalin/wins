@@ -21,17 +21,15 @@ window.addEventListener("load", () => {
   }
 
   let audios = [
-    new Audio("msn-sound_1.mp3"),
-    new Audio("winxpshutdown.mp3"),
-    new Audio("winxp.mp3"),
-    new Audio("vista.mp3"),
+    new Audio("audio/msn-sound_1.mp3"),
+    new Audio("audio/winxpshutdown.mp3"),
+    new Audio("audio/winxp.mp3"),
+    new Audio("audio/vista.mp3"),
   ];
   // all icons from -- https://win98icons.alexmeub.com/
   fetch("links.json").then((r) => r.json()).then((res) => {
     links = res;
-    audios[3].addEventListener("canplaythrough", (event) => {
-      /* the audio is now playable; play it if permissions allow */
-      reset();
-    });
+    // audios[3].addEventListener("canplaythrough", (event) => {});
+    reset();
   })
 });
